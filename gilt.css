@@ -104,8 +104,22 @@ div.c_wrapper, div.a_wrapper {
   clear: both !important;
 }
 
+#sale_leftnav {
+  z-index: 20;
+  margin-top: 55px !important;
+}
+
 #catalog.active {
   padding-left: 300px !important;
+}
+
+#catalog.active:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0px;
+  line-height: 0;
+  visibility: hidden;
 }
 
 #catalog.active > div:not(.product) {
