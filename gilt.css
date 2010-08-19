@@ -1,0 +1,126 @@
+#container {
+  margin: auto 25px !important;
+  width: auto !important;
+}
+
+#catalog {
+  float: none !important;
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
+#catalog.final {
+  margin-left: 300px !important;
+}
+
+#nav_container {
+  height: 20px !important;
+  margin-left:-25px !important;
+  float: left !important;
+  clear: none !important;
+}
+
+#nav_container ul.tabs {
+  height: 22px !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin-left: 42px !important;
+}
+
+#nav_container ul.tabs li.tab span.dropshadow {
+  height: 32px !important;
+}
+
+#nav_container ul.tabs li.tab a.title {
+  height: 22px !important;
+  overflow: hidden !important;
+  padding: 10px 0 0 0 !important;
+}
+
+#nav_container ul.tabls li.tab a.title span {
+  margin-top: 15px !important;
+}
+
+#carousel-nav-top-bar {
+  float: right !important;
+  clear: none !important;
+  margin-left: -25px !important;
+  margin-right: -15px !important;
+}
+
+#carousel-notifications-container {
+  display: none;
+}
+
+#gilt_logo {
+  width: 60px !important;
+  height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url(img/gilt-logo-trans.png) top center no-repeat !important;
+  position: relative !important;
+}
+
+#carousel-nav-top-bar a {
+  display: none;
+}
+
+#carousel-nav-cart {
+  display: block !important;
+}
+
+#scroll_bg {
+  height: 32px !important;
+}
+
+div.c_wrapper, div.a_wrapper {
+  background: #000 !important;
+}
+
+#c_sale #a_product div.breadcrumb {
+  display: none !important;
+}
+
+#c_sale #a_index #main {
+  width: 931px !important;
+  margin: auto !important;
+}
+
+#product_detail h4 {
+  display: none !important;
+}
+
+#product_detail div.details {
+  float: left !important;
+}
+
+#photo {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#main {
+  clear: both !important;
+}
+
+#catalog.active {
+  padding-left: 300px !important;
+}
+
+#catalog.active > div:not(.product) {
+  float: left !important;
+  padding-left: 25px !important;
+  padding-top: 10px !important;
+}
+
+#catalog.active #sale_brand_title {
+  display: none;
+}
+
+
+
+/* Women-only hack */
+body.women #main {
+  padding-top: 10px !important;
+}
