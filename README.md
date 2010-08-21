@@ -14,8 +14,8 @@ Features
 
 Requirements
 ------------
-Gilded Age requires Safari 5.0 or later.
+Gilded Age requires Safari 5.0 or later.  You also need a Gilt Groupe account.
 
 Installation
 ------------
-Download the extension from [here](http://github.com/downloads/mnutt/gilded_age/gilded_age-latest.safariextz).  If Safari doesn't automatically open it, drag it into Safari to install.
+Download the extension from [here](http://github.com/downloads/mnutt/gilded_age/gilded_age-latest.safariextz).  If Safari doesn't automatically open it, drag it into Safari to install.  Then go to [www.gilt.com](http://gilt.com), log in, and see it in action.
