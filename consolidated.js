@@ -15,15 +15,16 @@ function combineMultiBrandSale() {
     $("#catalog").html('');
 
     $.eachDelay($("#brands a.brand_button:visible"), function() {
-      var name = $(this).text();
+      var button = $(this);
+      var name = button.text();
       var id = name.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
-      var url = $(this).attr('onclick').toString().match(/location = \'([^\']+)\'/)[1];
+      var url = button.attr('onclick').toString().match(/location = \'([^\']+)\'/)[1];
       var brandDiv = $("<div class='brand' style='width: 100%;'></div>");
       brandDiv.attr('id', id);
 
       $("#catalog").append(brandDiv);
 
-      $(this).attr('href', '#' + id);
+      button.attr('href', '#' + id);
 
       $.get(url, function(data) {
         var title = $("<h2 class='brand_title'>" + name + "</h2>");
@@ -36,6 +37,9 @@ function combineMultiBrandSale() {
         brandDiv.append(catalog.html());
         brandDiv.find('#all_sold_out').hide();
         brandDiv.fadeIn();
+
+        // Show that we loaded the sale
+        $('#sale_leftnav a.brand_button[href=#' + id + '] h2').css({fontWeight: 'bold'});
 
         leftNavScroll();
       });
