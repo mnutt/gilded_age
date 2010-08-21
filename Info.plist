@@ -23,6 +23,8 @@
 			<key>End</key>
 			<array>
 				<string>gilt.js</string>
+				<string>jquery.each_delay.js</string>
+				<string>consolidated.js</string>
 			</array>
 			<key>Start</key>
 			<array>
