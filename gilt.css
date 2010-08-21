@@ -140,3 +140,32 @@ div.c_wrapper, div.a_wrapper {
 body.women #main {
   padding-top: 10px !important;
 }
+
+/* My Account */
+#c_account #main_col {
+  float: left !important;
+  margin-right: 25px !important;
+}
+
+#c_account #main #account_nav {
+  float: right !important;
+}
+
+#c_account #main {
+  min-width: 950px;
+}
+
+
+/* Footer */
+#bottom_container {
+  width: auto !important;
+  margin: 0 20px !important;
+}
+
+#footer {
+  line-height: 1.8em !important;
+  text-align: center !imporatnt;
+  width: auto !important;
+  max-width: 1005px !important;
+  margin: 0 auto !important;
+}
