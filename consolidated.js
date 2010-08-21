@@ -5,7 +5,7 @@ if($("#c_sale #a_splash".length > 0) && $("div.product").length == 0) {
 
   $("#catalog").html('');
 
-  $.eachDelay($("#brands a.brand_button"), function() {
+  $.eachDelay($("#brands a.brand_button:visible"), function() {
     var name = $(this).text();
     var id = name.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
     var url = $(this).attr('onclick').toString().match(/location = \'([^\']+)\'/)[1];
@@ -25,6 +25,7 @@ if($("#c_sale #a_splash".length > 0) && $("div.product").length == 0) {
       catalog.addClass("catalog").attr("id", "");
       brandDiv.hide();
       brandDiv.append(catalog.html());
+      brandDiv.find('#all_sold_out').hide();
       brandDiv.fadeIn();
 
       leftNavScroll();
@@ -36,18 +37,18 @@ if($("#c_sale #a_splash".length > 0) && $("div.product").length == 0) {
   $.each($("#brands a.brand_button"), function() {
     var clone = $(this).clone();
     var parent = $(this).parent();
-    var id = $(this).attr('id');
+    var name = $(this).text();
+    var id = name.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+
     $(this).remove();
     parent.append(clone);
-    $(clone).attr('onclick', '').attr('id', id);
+    $(clone).attr('onclick', '').attr('href', '#' + id);
   });
 
 
- // $(document).bind("catalogchanged", function() { alert("changed!"); });
-
- // $("#catalog").height($(window).height()).append("<div id='temp_junk' class='product'></div>");
- // $(document).trigger("catalogchanged");
-
+  $("#sale_leftnav div.drop_down_content").live('click', function() {
+    setTimeout(function() { document.location.reload(); }, 500);
+  });
 
   function leftNavScroll() {
     var w = $(window);
