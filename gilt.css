@@ -45,6 +45,45 @@
   margin-right: -15px !important;
 }
 
+div.account_dropdown {
+  position: absolute;
+  top: 7px;
+  right: 85px;
+}
+
+div.account_dropdown p {
+  color: #EEE !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  padding: 0 7px !important;
+  -webkit-user-select: none;
+}
+
+div.account_dropdown p:hover {
+  text-decoration: underline !important;
+}
+
+div.account_dropdown p small {
+  font-size: 0.6em !important;
+  line-height: 0 !important;
+}
+
+div.account_dropdown div.items {
+  display: none;
+  margin: -6px -3px 0 -3px !important;
+  background-color: #222 !important;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-box-shadow: 0px 4px 6px -4px #000 inset;
+  padding: 3px;
+}
+
+div.account_dropdown div.items a {
+  display: block !important;
+  padding: 7px !important;
+}
+
 #carousel-notifications-container {
   display: none;
 }
@@ -141,20 +180,11 @@ body.women #main {
   padding-top: 10px !important;
 }
 
-/* My Account */
-#c_account #main_col {
-  float: left !important;
-  margin-right: 25px !important;
+/* Some stuff is still fixed width */
+#c_account #main, #c_blog #main, #c_return #main, #c_wait_list #main, #c_personal_invitation_link #main, #c_nickname #main, #c_address #main, #c_credit_card #main, #c_support #main {
+  width: 921px !important;
+  margin: auto !important;
 }
-
-#c_account #main #account_nav {
-  float: right !important;
-}
-
-#c_account #main {
-  min-width: 950px;
-}
-
 
 /* Footer */
 #bottom_container {

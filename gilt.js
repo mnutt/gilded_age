@@ -56,9 +56,20 @@ if(document.getElementById("photo")) {
   replaceImage();
   resizeImage();
 
+  var noteLink = $("#better_sizing_link");
+  var notes = $("#size_guide div.size_notes div");
+  noteLink.before(notes.css({marginBottom: '1em'}));
+
   window.addEventListener("resize", resizeImage);
 }
 
-$("#footer").width(1050).prepend("<a href='/account'>My Account</a>");
+var accountText = $("#carousel-nav-top-bar a:last");
+var dropdown = $("<div class='account_dropdown'><p>" + accountText.text() + " <small>&#9660;</small></p><div class='items'></div></div>");
+accountText.remove();
+
+var items = dropdown.find('div.items');
+$("#carousel-nav-top-bar a:hidden").appendTo(items);
+$("body").append(dropdown);
+dropdown.find('p').click(function() { $("div.account_dropdown div.items").slideToggle(300); });
 
 $("#images div.product_other_views > dl").text("Click to see other views:");
