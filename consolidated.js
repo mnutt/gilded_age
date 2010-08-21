@@ -19,9 +19,9 @@ if($("#c_sale #a_splash".length > 0) && $("div.product").length == 0) {
     $.get(url, function(data) {
       var title = $("<h2>" + name + "</h2>");
       title.css({padding: "0 0 5px 0",
-                 borderBottom: "1px solid #FFF",
+                 borderBottom: "2px solid #555",
                  color: "#FFF",
-                 margin: "0 0 20px 0",
+                 margin: "0 20px 20px 0",
                  clear: "both"});
       brandDiv.append(title);
 
