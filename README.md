@@ -17,3 +17,8 @@ Requirements
 ------------
 
 Gilded Age requires Safari 5.0 or later.
+
+Installation
+------------
+
+Download the extension from [here](http://github.com/downloads/mnutt/gilded_age/gilded_age-latest.safariextz).  If Safari doesn't automatically open it, drag it into Safari to install.
