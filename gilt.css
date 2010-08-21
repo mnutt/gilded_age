@@ -128,7 +128,13 @@ div.c_wrapper, div.a_wrapper {
   display: none;
 }
 
-
+#catalog h2.brand_title {
+  padding: 0 0 5px 0;
+  border-bottom: 2px solid #555;
+  color: #FFF;
+  margin: 0 20px 20px 0;
+  clear: both;
+}
 
 /* Women-only hack */
 body.women #main {
