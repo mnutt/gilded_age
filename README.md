@@ -18,4 +18,8 @@ Gilded Age requires Safari 5.0 or later.  You also need a Gilt Groupe account.  
 
 Installation
 ------------
-Download the extension from [here](http://github.com/downloads/mnutt/gilded_age/gilded_age-1.3.1.safariextz).  If Safari doesn't automatically open it, drag it into Safari to install.  Then go to [www.gilt.com](http://gilt.com), log in, and see it in action.
+Download the extension from [here](http://github.com/downloads/mnutt/gilded_age/gilded_age-1.3.2.safariextz).  If Safari doesn't automatically open it, drag it into Safari to install.  Then go to [www.gilt.com](http://gilt.com), log in, and see it in action.
+
+License
+-------
+Gilded Age is released under the GPL v2.  The full license text may be obtained at: http://www.gnu.org/licenses/gpl-2.0.html
