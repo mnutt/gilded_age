@@ -181,7 +181,7 @@ body.women #main {
 }
 
 /* Some stuff is still fixed width */
-#c_account #main, #c_blog #main, #c_return #main, #c_wait_list #main, #c_personal_invitation_link #main, #c_nickname #main, #c_address #main, #c_credit_card #main, #c_support #main {
+#c_account #main, #c_blog #main, #c_return #main, #c_wait_list #main, #c_personal_invitation_link #main, #c_nickname #main, #c_address #main, #c_credit_card #main, #c_support #main, #c_blackbird #main, body.basic #container {
   width: 921px !important;
   margin: auto !important;
 }
