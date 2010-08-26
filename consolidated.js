@@ -48,6 +48,7 @@ function combineMultiBrandSale() {
         brandLink.append(forSaleIndicator);
 
         leftNavScroll();
+        toggleDimSoldOutProducts(brandDiv);
       });
     }, 1000);
 
@@ -68,6 +69,25 @@ function combineMultiBrandSale() {
     $("#sale_leftnav div.drop_down_content").live('click', function() {
       setTimeout(function() { document.location.reload(); }, 500);
     });
+
+    addSoldOutFilter();
+
+    function addSoldOutFilter() {
+      var checkbox = $("<div><input id='sold_out_checkbox' type='checkbox'/> Dim sold out</div>");
+      checkbox.insertAfter('#size_scroll_container');
+      checkbox.css({ 'border-bottom': '1px solid #555', paddingBottom: '10px', marginLeft: '15px' });
+
+      $('#sold_out_checkbox').click(toggleDimAllSoldOutProducts);
+    };
+
+    function toggleDimAllSoldOutProducts() {
+      toggleDimSoldOutProducts(document);
+    }
+
+    function toggleDimSoldOutProducts(doc) {
+      var opacity = $('#sold_out_checkbox').is(':checked') ? 0.25 : 1;
+      $(doc).find('.product.filter_look_sold_out').fadeTo('fast', opacity);
+    }
 
     function leftNavScroll() {
       var w = $(window);
