@@ -63,7 +63,7 @@ if(document.getElementById("photo")) {
   window.addEventListener("resize", resizeImage);
 }
 
-var accountText = $("#carousel-nav-top-bar a:last");
+var accountText = $("#carousel-nav-top-bar a:not(:has(span)):last");
 var dropdown = $("<div class='account_dropdown'><p>" + accountText.text() + " <small>&#9660;</small></p><div class='items'></div></div>");
 accountText.remove();
 

@@ -28,6 +28,7 @@
 				<string>gilded_age.js</string>
 				<string>jquery.each_delay.js</string>
 				<string>consolidated.js</string>
+				<string>inventory.js</string>
 			</array>
 			<key>Start</key>
 			<array>
@@ -37,6 +38,7 @@
 		<key>Stylesheets</key>
 		<array>
 			<string>gilded_age.css</string>
+			<string>inventory.css</string>
 		</array>
 	</dict>
 	<key>Description</key>

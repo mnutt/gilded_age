@@ -12,5 +12,15 @@
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>quick_inventory</string>
+		<key>Title</key>
+		<string>Show quick inventory levels on sale page</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
 </array>
 </plist>

@@ -1,0 +1,77 @@
+#catalog .product a.product_image {
+  position: relative !important;
+  text-decoration: none !important;
+}
+
+#catalog .product div.available_sizes {
+  background-color: rgba(10,10,10,0.7) !important;
+  color: #CCC !important;
+  padding: 4px 0 !important;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  text-align: left;
+  display: none;
+  font-size: 0.8em !important;
+  overflow: hidden;
+  margin-top: 0 !important;
+}
+
+#catalog .product a.refresh_inventory {
+  background-color: rgba(10,10,10,0.7) !important;
+  color: #CCC !important;
+  top: 0 !important;
+  position: absolute !important;
+  padding: 10px !important;
+  left: 0;
+  margin: 0 !important;
+  display: none;
+  z-index: 1000 !important;
+  text-decoration: none !important;
+}
+
+#catalog .product:hover div.available_sizes.fetched,
+#catalog .product:hover a.refresh_inventory {
+  display: block;
+}
+
+#catalog .product a.refresh_inventory:hover {
+  background-color: rgb(0,0,0) !important;
+}
+#catalog .product div.available_sizes p {
+  font-size: 0.8em !important;
+  text-transform: uppercase;
+  color: #CCC !important;
+  margin: 3px 0px 1px 9px !important;
+}
+#catalog .product div.available_sizes div.size_container {
+  width: 220px !important;
+  position: relative !important;
+  z-index: 150 !important;
+  margin-top: 0 !important;
+}
+#catalog .product div.available_sizes div.sizes {
+  padding: 3px 6px !important;
+  z-index: 100 !important;
+  margin-top: 0 !important;
+}
+#catalog .product div.available_sizes div.clear {
+  margin-top: 0 !important;
+  clear: both !important;
+}
+#catalog .product div.available_sizes div.sizes a.size {
+  float: left !important;
+  color: #FFF !important;
+  border: 1px solid #777 !important;
+  margin: 0px 2px 5px 2px !important;
+  padding: 3px 6px !important;
+  z-index: 100 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+#catalog .product div.available_sizes div.sizes a.size:hover {
+  background: #666 !important;
+}

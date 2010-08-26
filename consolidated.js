@@ -1,10 +1,8 @@
-function getMessage(msgEvent) {
-  if (msgEvent.name == "settingValueIs" && msgEvent.message == true)
-    combineMultiBrandSale()
-}
-
 safari.self.tab.dispatchMessage("getSettingValue", "combined_multi_brand");
-safari.self.addEventListener("message", getMessage, false);
+safari.self.addEventListener("message", function(msgEvent) {
+  if (msgEvent.name == "settingValueFor_combined_multi_brand" && msgEvent.message == true)
+    combineMultiBrandSale()
+}, false);
 
 function combineMultiBrandSale() {
 
@@ -18,7 +16,9 @@ function combineMultiBrandSale() {
       var button = $(this);
       var name = button.text();
       var id = name.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
-      var url = button.attr('onclick').toString().match(/location = \'([^\']+)\'/)[1];
+      var clickHandler = (button.attr('onClick')).toString();
+      var url = clickHandler.match(/location = \'([^\']+)\'/)[1];
+
       var brandDiv = $("<div class='brand' style='width: 100%;'></div>");
       brandDiv.attr('id', id);
 
@@ -33,10 +33,13 @@ function combineMultiBrandSale() {
         var doc = $(data);
         var catalog = doc.find('#catalog');
         catalog.addClass("catalog").attr("id", "");
-        brandDiv.hide();
         brandDiv.append(catalog.html());
-        brandDiv.find('#all_sold_out').hide();
-        brandDiv.fadeIn();
+
+        if(typeof(addInventoryContainers) != "undefined") {
+          var products = brandDiv.find('div.product')
+          addInventoryContainers(products);
+          addInventoryUpdateButtons(products);
+        }
 
         // Show that we loaded the sale
         $('#sale_leftnav a.brand_button[href=#' + id + '] h2').css({fontWeight: 'bold'});
@@ -110,7 +113,9 @@ function combineMultiBrandSale() {
       };
       var f3 = function() {
         visibleProducts = $(".product:visible").length > 0;
-        max = $(".product:visible:last").offset().top + $(".product:visible:last").height();
+        if($(".product:visible").length > 0) {
+          max = $(".product:visible:last").offset().top + $(".product:visible:last").height();
+        }
         firstProductTop = $(".product:visible:first").offset().top;
         ch = $("#catalog").height() - 93;
         f2();

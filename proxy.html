@@ -7,7 +7,7 @@
         var value = safari.extension.settings.getItem(messageEvent.message);
 
         // return value of foo to injected script
-        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("settingValueIs", value);
+        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("settingValueFor_"+messageEvent.message, value);
       }
     }
 
