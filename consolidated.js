@@ -38,8 +38,14 @@ function combineMultiBrandSale() {
         brandDiv.find('#all_sold_out').hide();
         brandDiv.fadeIn();
 
+        var forSaleItems = doc.find('.product').not('.filter_look_sold_out').size();
+        var forSaleIndicator = $("<span>" + forSaleItems + "</span>");
+        forSaleIndicator.css({ float: 'right', marginRight: '20px', opacity: 0.4 });
+
         // Show that we loaded the sale
-        $('#sale_leftnav a.brand_button[href=#' + id + '] h2').css({fontWeight: 'bold'});
+        var brandLink = $('#sale_leftnav a.brand_button[href=#' + id + '] h2');
+        brandLink.css({fontWeight: 'bold'});
+        brandLink.append(forSaleIndicator);
 
         leftNavScroll();
       });
