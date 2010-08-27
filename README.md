@@ -11,6 +11,8 @@ Features
 * Shows sizing notes directly on the product detail page, rather than in Sizing popup.
 * Condenses navigation to give more screen real estate to products
 * Consolidates sales containing multiple brands into a single page
+* View size availability on product listing pages
+* Consolidated sales have the option to dim sold-out items to make scanning easier
 
 Requirements
 ------------
