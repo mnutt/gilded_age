@@ -1,14 +1,27 @@
-safari.self.tab.dispatchMessage("getSettingValue", "quick_inventory");
+var resourceBaseURI = '';
+if (typeof(safari) !== 'undefined') {
+  resourceBaseURI = safari.extension.baseURI;
+  safari.self.tab.dispatchMessage("getSettingValue", "quick_inventory");
+}
+else if (typeof(chrome) !== 'undefined') {
+  resourceBaseURI = chrome.extension.getURL('');
+}
 
 var sizeSortOrder = ["0", "P", "XXS", "XSMALL", "S", "SMALL", "M", "MEDIUM", "L", "LARGE", "XL", "XXL", "XXXL", "TWIN", "FULL", "FULL/QUEEN", "QUEEN", "KING"];
 var lookCache = {}; // each lookId contains an array of [sku, status] pairs
 var lookToProductMap = {}; // each lookId maps to a productId
 var skuToSizeMap = {};
 
-safari.self.addEventListener("message", function(msgEvent) {
-  if (msgEvent.name == "settingValueFor_quick_inventory" && msgEvent.message == true)
-    showQuickInventory();
-}, false);
+if (typeof(safari) !== 'undefined') {
+  safari.self.addEventListener("message", function(msgEvent) {
+    if (msgEvent.name == "settingValueFor_quick_inventory" && msgEvent.message == true)
+      showQuickInventory();
+  }, false);
+}
+
+if (typeof(chrome) !== 'undefined') {
+  showQuickInventory();
+}
 
 function getInventory(el) {
   var lookId = el.attr('id').replace(/^product_look_/, '');

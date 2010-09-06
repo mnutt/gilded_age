@@ -1,0 +1,19 @@
+{
+  "name": "Gilded Age",
+  "version": "2.1.0",
+  "description": "Different interface for the fashion site gilt.com",
+  "icons": {
+    "128": "Icon.png"
+  },
+  "permissions": [
+    "http://www.gilt.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.gilt.com/*"],
+      "css" : ["gilded_age.css", "inventory.css"],
+      "js" : ["jquery-1.4.2.js", "gilded_age.js", "jquery.each_delay.js", "consolidated.js", "inventory.js"],
+      "run_at" : "document_end"
+    }
+  ]
+}
