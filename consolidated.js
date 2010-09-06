@@ -1,8 +1,14 @@
-safari.self.tab.dispatchMessage("getSettingValue", "combined_multi_brand");
-safari.self.addEventListener("message", function(msgEvent) {
-  if (msgEvent.name == "settingValueFor_combined_multi_brand" && msgEvent.message == true)
-    combineMultiBrandSale()
-}, false);
+if (typeof(safari) !== 'undefined') {
+  safari.self.tab.dispatchMessage("getSettingValue", "combined_multi_brand");
+  safari.self.addEventListener("message", function(msgEvent) {
+    if (msgEvent.name == "settingValueFor_combined_multi_brand" && msgEvent.message == true)
+      combineMultiBrandSale()
+  }, false);
+}
+
+if (typeof(chrome) !== 'undefined') {
+  combineMultiBrandSale();
+}
 
 function combineMultiBrandSale() {
 

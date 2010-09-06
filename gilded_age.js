@@ -73,3 +73,10 @@ $("body").append(dropdown);
 dropdown.find('p').click(function() { $("div.account_dropdown div.items").slideToggle(300); });
 
 $("#images div.product_other_views > dl").text("Click to see other views:");
+
+// On Chrome, the logo CSS won't reference the right img
+if (typeof(chrome) !== 'undefined') {
+  var backgroundStyle = 'url(' + chrome.extension.getURL("img/gilt-logo-trans.png") + ')';
+  backgroundStyle += ' top center no-repeat !important;';
+  $('#gilt_logo').css('background', backgroundStyle);
+}
